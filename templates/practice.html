@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}{{ q_type_cn }} - {{ quiz_set.name }}{% endblock %}
+
+{% block content %}
+<div class="practice-header">
+    {% if q_type == 'favorite' %}
+    <a href="{{ url_for('favorites') }}" class="btn btn-outline btn-sm">返回收藏</a>
+    {% elif is_wrong_practice %}
+    <a href="{{ url_for('wrongbook', quiz_id=quiz_set.id) }}" class="btn btn-outline btn-sm">返回错题本</a>
+    {% else %}
+    <a href="{{ url_for('practice_menu', quiz_id=quiz_set.id) }}" class="btn btn-outline btn-sm">返回</a>
+    {% endif %}
+    <div class="progress-bar-wrap">
+        <div class="progress-text"><span id="cur-num">0</span> / {{ total }}</div>
+        <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+    </div>
+    <div class="score-display">
+        <span class="score-correct" id="score-correct">0</span>对
+        <span class="score-wrong" id="score-wrong">0</span>错
+    </div>
+</div>
+
+<div class="practice-area" id="practice-area">
+    <input type="hidden" id="quiz-id" value="{{ quiz_set.id }}">
+    <input type="hidden" id="q-type" value="{{ q_type }}">
+    <input type="hidden" id="total" value="{{ total }}">
+    {% if is_wrong_practice %}<input type="hidden" id="is-wrong-practice">{% endif %}
+
+    <div id="question-area">
+        <div class="loading">加载中...</div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// 题目数据由后端传入
+const QUESTIONS = {{ questions | tojson | safe }};
+const Q_TYPE = "{{ q_type }}";
+const CHECK_URL = "{{ url_for('api_check') }}";
+const FAVORITE_URL = "{{ url_for('api_favorite') }}";
+const FAVORITE_IDS = {{ favorite_ids | tojson | safe if favorite_ids else '[]' }};
+</script>
+{% endblock %}

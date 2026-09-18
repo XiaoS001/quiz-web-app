@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block title %}选择题型 - {{ quiz_set.name }}{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>{{ quiz_set.name }}</h1>
+    <a href="{{ url_for('index') }}" class="btn btn-outline">返回</a>
+</div>
+
+<p class="page-subtitle">选择要练习的题型</p>
+
+<div class="type-menu">
+    {% set s = quiz_set.stats() %}
+    {% set w = quiz_set.wrong_counts() %}
+
+    {% if s.choice %}
+    <a href="{{ url_for('practice', quiz_id=quiz_set.id, q_type='choice') }}" class="type-card type-choice">
+        <div class="type-card-icon">A</div>
+        <div class="type-card-body">
+            <h3>选择题</h3>
+            <p>共 {{ s.choice }} 题{% if w.choice %} · 错题 {{ w.choice }}{% endif %}</p>
+        </div>
+    </a>
+    {% endif %}
+
+    {% if s.judge %}
+    <a href="{{ url_for('practice', quiz_id=quiz_set.id, q_type='judge') }}" class="type-card type-judge">
+        <div class="type-card-icon">✓</div>
+        <div class="type-card-body">
+            <h3>判断题</h3>
+            <p>共 {{ s.judge }} 题{% if w.judge %} · 错题 {{ w.judge }}{% endif %}</p>
+        </div>
+    </a>
+    {% endif %}
+
+    {% if s.multi %}
+    <a href="{{ url_for('practice', quiz_id=quiz_set.id, q_type='multi') }}" class="type-card type-multi">
+        <div class="type-card-icon">M</div>
+        <div class="type-card-body">
+            <h3>多选题</h3>
+            <p>共 {{ s.multi }} 题{% if w.multi %} · 错题 {{ w.multi }}{% endif %}</p>
+        </div>
+    </a>
+    {% endif %}
+
+    {% if s.fill %}
+    <a href="{{ url_for('practice', quiz_id=quiz_set.id, q_type='fill') }}" class="type-card type-fill">
+        <div class="type-card-icon">_</div>
+        <div class="type-card-body">
+            <h3>填空题</h3>
+            <p>共 {{ s.fill }} 题{% if w.fill %} · 错题 {{ w.fill }}{% endif %}</p>
+        </div>
+    </a>
+    {% endif %}
+
+    {% if s.short_answer %}
+    <a href="{{ url_for('practice', quiz_id=quiz_set.id, q_type='short_answer') }}" class="type-card type-short_answer">
+        <div class="type-card-icon">Q</div>
+        <div class="type-card-body">
+            <h3>简答题</h3>
+            <p>共 {{ s.short_answer }} 题{% if w.short_answer %} · 错题 {{ w.short_answer }}{% endif %}</p>
+        </div>
+    </a>
+    {% endif %}
+</div>
+{% endblock %}

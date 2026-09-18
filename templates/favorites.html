@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}我的收藏 - 刷题{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>我的收藏</h1>
+    <a href="{{ url_for('index') }}" class="btn btn-outline">返回</a>
+</div>
+
+{% if fav_by_quiz %}
+{% for quiz_id, data in fav_by_quiz.items() %}
+<div class="fav-quiz-section">
+    <div class="fav-quiz-title">
+        {{ data.quiz_set.name }}
+        <span class="fav-quiz-count">({{ loop.length }} 题)</span>
+    </div>
+    <div style="margin-bottom: 12px;">
+        <a href="{{ url_for('favorite_practice', quiz_id=quiz_id) }}" class="btn btn-primary btn-sm">收藏练习</a>
+    </div>
+    {% for item in data['items'] %}
+    <div class="fav-item">
+        <div class="fav-item-stem">{{ item.question.stem[:100] }}{% if item.question.stem|length > 100 %}...{% endif %}</div>
+        <div class="fav-item-meta">
+            <span>{{ type_cn.get(item.question.type, item.question.type) }}{% if item.question.chapter %} · {{ item.question.chapter }}{% endif %}</span>
+            <span>收藏于 {{ item.fav.created_at.strftime('%m-%d %H:%M') }}</span>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endfor %}
+{% else %}
+<div class="empty-state">
+    <p>还没有收藏题目</p>
+    <p class="empty-hint">刷题时点击「☆ 收藏」按钮即可收藏重要题目</p>
+</div>
+{% endif %}
+{% endblock %}

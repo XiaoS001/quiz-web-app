@@ -1,0 +1,731 @@
+# 题库名称：Java期末（选择判断多选）
+
+## 章节：第1部分
+
+### [选择] 下列选项中，包含IoC和DI功能的模块是（ ）。
+A. Beans
+B. Core
+C. Context
+D. SpEL
+答案：B
+
+### [选择] 下列选项中，关于Spring框架优点的说法不正确的是（ ）。
+A. 非侵入式设计
+B. 支持声明式事务
+C. 支持AOP编程
+D. 提供了自动配置和嵌入式Web服务器
+答案：D
+
+### [选择] 下列选项中，关于Spring框架的描述，错误的是（ ）。
+A. Spring是一个提供了一站式服务的框架
+B. Spring是轻量级框架
+C. Spring是开源框架
+D. Spring提高了组件之间的耦合度
+答案：D
+
+### [选择] 下列选项中，对于Spring的数据访问及集成模块说法错误的是（ ）。
+A. JDBC模块简化了JDBC编程的过程
+B. JMS模块主要用于处理消息传递，包括消息的生产和消费
+C. ORM模块提供了对主流的对象关系映射框架的集成支持
+D. Transactions模块负责事务管理，但是没有提供声明式事务管理的功能
+答案：D
+
+### [选择] 下列选项中，对于Spring框架中的IoC和DI描述错误的是（ ）。
+A. IoC表示控制反转
+B. IoC旨在构建松耦合的应用程序，降低代码的复杂度
+C. 通常谈及Spring容器时，指的就是Spring框架中的DI容器
+D. DI表示依赖注入，是IoC的一种实现方式
+答案：C
+
+### [选择] 下列选项中，不属于ApplicationContext的实现类的是（ ）。
+A. ClassPathXmlApplicationContext
+B. FileSystemXmlApplicationContext
+C. AnnotationConfigApplicationContext
+D. BeanFactory
+答案：D
+
+### [选择] 下列选项中，对于Spring Bean的配置的标签说法错误的是（ ）。
+A. <constructor-arg>标签用于设置Bean的构造方法参数
+B. <property>标签用于设置Bean中Set类型的属性值
+C. <list>标签用于设置Bean中List类型的属性值
+D. <map>标签用于设置Bean中Map类型的属性值
+答案：B
+
+### [选择] 下列选项中，关于Spring支持的作用域描述错误的是（ ）。
+A. singleton是Spring框架的默认作用域
+B. 当将Bean的作用域设置为prototype时，每次从容器中请求Bean都会创建一个新的Bean
+C. 当将Bean的作用域设置为request时，Bean在整个Web应用中都有效
+D. 当将Bean的作用域设置为application时，整个Web应用的生命周期内只存在一个Bean
+答案：C
+
+### [选择] 下列选项中，关于Spring用于装配注解描述错误的是（ ）。
+A. @Component用于标识类为Spring中的Bean
+B. @Scope指定Bean的作用域
+C. @Value指定自动装配的对象名称
+D. @Autowired指定要自动装配的对象
+答案：C
+
+### [选择] 下列选项中，对于Bean的生命周期描述错误的是（ ）。
+A. Bean的生命周期是指Bean从创建到销毁的整个过程
+B. Spring中作用域不同的Bean在生命周期管理上没有区别
+C. 开发者可以通过@Bean注解的initMethod属性指定初始化方法
+D. 开发者可以通过@Bean注解的destroyMethod属性指定销毁方法
+答案：B
+
+### [选择] 下列选项中，关于AOP的常用术语描述错误的是（ ）。
+A. 切点是切面中的实际代码，用于实现切面的具体功能
+B. 目标对象指的是被切面增强的原始对象
+C. 织入是指将切面代码插入到目标对象上，从而生成代理对象的过程
+D. 代理是织入切面后创建的对象，用于应用通知到目标对象
+答案：A
+
+### [选择] 下列选项中，关于JDK动态代理的描述错误的是（ ）。
+A. AOP中的JDK动态代理是Spring AOP的默认的动态代理机制
+B. JDK动态代理利用Java反射机制在运行时动态地创建目标对象的代理对象
+C. JDK动态代理需要定义一个InvocationHandler实现类
+D. JDK动态代理不能为接口创建代理实例
+答案：D
+
+### [选择] 下列选项中，关于CGLIB动态代理的描述错误的是（ ）。
+A. CGLIB动态代理只能为接口创建代理实例
+B. CGLIB动态代理可以在运行时扩展Java类和实现接口
+C. 使用CGLIB动态代理时，代理类需要实现MethodInterceptor接口
+D. 使用CGLIB动态代理时，运行时的执行效率比JDK动态代理快
+答案：A
+
+### [选择] 下列选项中，关于配置AOP的标签描述错误的是（ ）。
+A. <aop:pointcut>用于配置切点
+B. <aop:before>用于配置前置通知，在目标方法执行前实施增强
+C. <aop:after>用于配置后置通知，在目标方法执行后实施增强
+D. <aop:around>用于配置返回通知
+答案：D
+
+### [选择] 下列选项中，关于AspectJ的常用注解描述错误的是（ ）。
+A. @Pointcut用于定义切点表达式，可以通过一个方法签名来表示切点名称
+B. @Before用于定义前置通知
+C. @AfterReturning用于定义后置通知
+D. @Around用于定义异常通知
+答案：D
+
+### [选择] 下列选项中，对于Spring的事务管理描述错误的是（ ）。
+A. PlatformTransactionManager接口是Spring事务管理的核心，它提供了管理事务的方法
+B. TransactionDefinition接口中定义了事务描述相关的常量
+C. 当事务被标记为只读时，意味着该事务只从数据库中读取数据而不修改数据
+D. 编程式事务管理是通过在配置文件中或者使用注解的方式来声明事务的管理方式
+答案：D
+
+### [选择] 下列选项中，关于事务的传播行为描述错误的是（ ）。
+A. PROPAGATION_REQUIRED为默认的事务传播行为
+B. PROPAGATION_SUPPORTS指定如果当前没有事务，则创建一个新的事务
+C. PROPAGATION_MANDATORY指定当前必须存在一个事务，如果没有，就抛出异常
+D. PROPAGATION_REQUIRES_NEW指定创建一个新的事务，如果当前已存在一个事务，将已存在的事务挂起
+答案：B
+
+### [选择] 下列选项中，关于事务的隔离级别的描述错误的是（ ）。
+A. ISOLATION_DEFAULT表示采用当前数据库默认的事务隔离级别
+B. ISOLATION_READ_UNCOMMITTED表示读未提交
+C. ISOLATION_READ_COMMITTED表示读已提交，无法避免脏读
+D. REPEATABLE_SERIALIZABLE使用该隔离级别不存在并发问题
+答案：C
+
+### [选择] 下列选项中，关于<tx:method>标签的常用属性描述错误的是（ ）。
+A. name用于指定方法名的匹配模式，该属性为必选属性
+B. propagation用于指定事务的传播行为
+C. read-only用于指定事务是否只读
+D. no-rollback-for用于指定触发事务回滚的异常类
+答案：D
+
+### [选择] 下列选项中，关于@Transactional的常用属性描述错误的是（ ）。
+A. rollbackFor用于指定使用的事务管理器
+B. propagation用于指定事务的传播行为
+C. isolation用于指定事务的隔离级别
+D. rollbackFor用于指定导致事务回滚的异常类数组
+答案：A
+
+### [选择] 下列选项中，关于Spring MVC常用的组件描述错误的是（ ）。
+A. DispatcherServlet为前端控制器，是整个Spring MVC流程控制中心
+B. HandlerMapping为处理器映射器，根据请求的URL、HTTP方法等信息找到对应的处理器
+C. Handler为处理器适配器，负责将请求适配到对应处理器处理请求
+D. ViewResolver为视图解析器，视图解析器会根据逻辑视图名解析成物理视图名
+答案：C
+
+### [选择] 下列选项中，关于@RequestMapping注解的属性描述错误的是（ ）。
+A. name属性用于为请求映射提供一个名称
+B. method属性用于指定该方法可以处理哪种类型的HTTP请求
+C. params属性用于指定请求参数的条件，为必选属性
+D. headers属性用于指定请求头的条件
+答案：C
+
+### [选择] 下列选项中，关于Spring MVC的执行流程描述错误的是（ ）。
+A. 用户通过浏览器向服务器发送请求，请求会被Spring MVC的前端控制器拦截
+B. 前端控制器拦截到请求后，会调用处理器映射器
+C. 处理器适配器会调用并执行相应的处理器
+D. 处理器执行完成后，会返回一个DispatcherServlet对象，该对象中会包含视图名或包含数据模型和视图名
+答案：D
+
+### [选择] 下列选项中，关于Ant风格的描述错误的是（ ）。
+A. ?通配符用于匹配任何单字符
+B. *通配符用于匹配任意1个
+C. **通配符用于匹配任意数量的目录层级
+D. Ant风格其实就是一种通配符风格，可以在处理器映射路径中使用通配符对访问的URL路径进行关联
+答案：B
+
+### [选择] 下列选项中，关于RESTful风格的描述错误的是（ ）。
+A. RESTful是按照REST风格访问网络资源的一种实践
+B. RESTful是把请求参数变成请求路径的一种风格
+C. RESTful风格在HTTP请求中，GET表示用于获取资源
+D. RESTful风格在HTTP请求中，POST表示用于更新资源
+答案：D
+
+### [选择] 下列选项中，不属于Spring MVC默认支持的类型的是（ ）。
+A. HttpServletRequest
+B. HttpServletResponse
+C. HttpSession
+D. Cookie
+答案：D
+
+### [选择] 下列选项中，关于@RequestParam注解的属性描述错误的是（ ）。
+A. value用于指定要绑定的请求参数的名称
+B. name与value属性作用一致
+C. required用于指定参数是否必须，默认是false
+D. defaultValue用于指定参数的默认值
+答案：C
+
+### [选择] 下列选项中，关于ModelAndView设置视图和模型数据的方法的描述错误的是（ ）。
+A. setViewName()方法用于在ModelAndView对象中设置一个逻辑视图名称，会覆盖预先存在的逻辑视图名称
+B. setView()方法用于在ModelAndView对象中设置一个视图实例，会覆盖预先存在的视图实例
+C. addObject()方法用于在ModelAndView对象中添加模型数据和视图实例
+D. addAllObjects()方法用于在ModelAndView对象中添加模型数据
+答案：C
+
+### [选择] 下列选项中，关于Spring MVC数据绑定的描述错误的是（ ）。
+A. 当使用Spring MVC默认支持的数据类型作为处理器的形参类型时，Spring MVC的参数处理适配器能够将HTTP请求中的参数自动转换并绑定到处理器方法的形参上
+B. 在POJO类型的数据绑定过程中，需要确保请求的参数名称与要绑定的POJO类中的属性名称保持一致
+C. Spring MVC的默认类型转换器可以转换Java中所有的数据类型
+D. @RequestBody注解需要书写在方法的形参前
+答案：C
+
+### [选择] 下列选项中，关于Spring MVC页面跳转和数据回写的描述错误的是（ ）。
+A. 当Spring MVC方法的返回值为void时，没有配置视图解析器，则会报HTTP Status 500错误
+B. 当Spring MVC方法的返回值为String类型时，处理器方法执行后，Spring MVC会根据方法的返回值跳转到对应的视图
+C. 当Spring MVC方法的返回值为String类型时，方法返回的字符串添加了"forward:"或"redirect:"前缀，则视图解析器不再会为方法返回值拼接后缀但是不会拼接前缀
+D. ModelAndView对象主要用于存储模型数据和视图信息
+答案：C
+
+### [选择] 下列选项中，关于SimpleMappingExceptionResolver类描述错误的是（ ）。
+A. exceptionMappings：用于配置异常与视图之间的映射关系
+B. defaultErrorView：用于定义默认的异常处理视图
+C. exceptionAttribute：用于指定异常信息在视图中的属性名称
+D. 上述说法都错误
+答案：D
+
+### [选择] 下列选项中，不是HandlerInterceptor接口中的方法的是（ ）。
+A. preHandler()
+B. postHandle()
+C. afterCompletion()
+D. handler()
+答案：D
+
+### [选择] 下列选项中，关于Spring MVC配置文件中拦截器的配置的说法错误的是（ ）。
+A. <mvc:interceptors>标签中可以使用<bean>标签配置拦截器
+B. <mvc:mapping>标签的path的属性值为"/"时，表示拦截所有路径
+C. <mvc:interceptors>标签中可以使用<mvc:interceptor>标签配置拦截器
+D. <mvc:exclude-mapping>标签的path属性用于配置不需要拦截的路径请求
+答案：B
+
+### [选择] 下列选项中，关于拦截器的描述错误的是（ ）。
+A. 拦截器基于动态拦截的机制对Web请求进行拦截和处理
+B. preHandler()方法会在请求处理之前被调用
+C. postHandle()方法会在请求处理之后，以及视图渲染之后被调用
+D. afterCompletion()方法会在整个请求处理流程结束之后被调用
+答案：C
+
+### [选择] 下列选项中，关于文件上传表单说法错误的是（ ）。
+A. 表单提交的HTTP请求方法需要为GET
+B. 表单的enctype属性的值需要设置为multipart/form-data
+C. 需要提供文件上传输入框
+D. 文件上传输入框中需要增加一个multiple属性
+答案：A
+
+### [选择] 下列选项中，关于SqlSession的描述错误的是（ ）。
+A. SqlSession接口的实例用于表示应用程序与数据库的一次会话
+B. 在多线程环境下，SqlSession的实例是线程安全的
+C. 默认情况下，SqlSession对象的事务不会自动提交
+D. DefaultSqlSession是MyBatis提供的SqlSession接口默认实现类
+答案：B
+
+### [选择] 下列选项中，关于MyBatis核心配置文件中的标签描述错误的是（ ）。
+A. <properties>标签用于定义属性
+B. <settings>标签用于配置数据库环境
+C. <typeAliases>标签用于定义类型的别名
+D. <plugins>标签用于定义插件
+答案：B
+
+### [选择] 下列选项中，关于<mappers>标签的描述错误的是（ ）。
+A. 可以通过<mapper>子标签和<package>子标签实现映射器信息的指定
+B. <mapper>子标签可以通过资源路径指定映射文件
+C. <mapper>子标签通过映射器接口的实现类指定映射器
+D. <package>子标签用于指定包含映射器接口的包名
+答案：C
+
+### [选择] 下列选项中，关于MyBatis映射文件中<select>标签的属性描述错误的是（ ）。
+A. id属性用于定义当前查询的唯一标识，是必需的属性
+B. resultType属性用于指定查询结果的映射类型
+C. resultMap属性用于指定一个结果集映射
+D. 当查询结果需要复杂映射时，可以同时使用resultMap和resultType实现
+答案：D
+
+### [选择] 下列选项中，对于MyBatis映射文件中的标签的描述错误的是（ ）。
+A. <select>标签用于配置SQL查询语句以及查询结果的映射规则
+B. <resultType>标签为定义结果集映射的根标签
+C. <sql>标签用于定义可重用的SQL片段
+D. <include>标签用于在SQL语句中引用前面定义的SQL片段
+答案：B
+
+### [选择] 下列选项中，关于MyBatis映射文件中生成动态SQL的标签描述错误的是（ ）。
+A. <if>标签的test属性用于指定条件表达式，如果条件表达式的值为true，则包含<if>标签内部的SQL语句
+B. <foreach>标签不能遍历数组
+C. <where>标签可以自动处理条件语句中的逻辑连接词，如AND或OR
+D. <choose>标签类似于Java中的switch语句
+答案：B
+
+### [选择] 下列选项中，关于<choose>标签、<when>标签和<otherwise>标签的描述错误的是（ ）。
+A. <choose>标签可以包含零个或多个<when>标签
+B. <choose>标签可以包含一个或多个<otherwise>标签
+C. 如果所有<when>子标签的条件表达式都不为true，则<otherwise>标签内部的SQL片段会被包含到最终生成的SQL语句中
+D. 一旦某个<when>标签的条件满足后，整个<choose>块的执行就结束了，后续的<when>标签和<otherwise>标签将不会再执行
+答案：B
+
+### [选择] 下列选项中，关于<foreach>标签的属性描述错误的是（ ）。
+A. item属性用于指定遍历过程中每个元素的别名
+B. index属性用于指定在遍历过程中当前元素的索引值
+C. open属性用于指定循环开始处插入的字符串，常用于包围循环内容的起始符号
+D. separator属性与open相对应，用于定义在循环结束处插入的字符串，用于包围循环内容的终止符号
+答案：D
+
+### [选择] <foreach>标签中用于指定遍历过程中每个元素的别名的属性的是（ ）。
+A. item
+B. index
+C. separator
+D. collection
+答案：A
+
+### [选择] <trim>标签中用于指定给SQL语句增加的后缀的属性的是（ ）。
+A. prefix
+B. prefixOverrides
+C. suffix
+D. suffixOverrides
+答案：C
+
+### [选择] 下列选项中，用于标记方法参数在SQL语句中的占位符名称的注解是（ ）。
+A. @Insert
+B. @Param
+C. @Results
+D. @Result
+答案：B
+
+### [选择] 下列选项中，关于MyBatis中@Result注解的属性描述错误的是（ ）。
+A. property属性用于指定实体类的类型
+B. column属性用于指定查询结果集中对应的字段名
+C. one属性用于指定描述一对一关联关系的@One注解
+D. many属性用于指定描述一对多关联关系的@Many注解
+答案：A
+
+### [选择] 下列选项中，关于MyBatis中@One注解描述错误的是（ ）。
+A. 用于标记插入一条记录的方法
+B. 提供了fetchType属性用于指定控制关联对象的加载策略
+C. 提供了select用于指定关联查询的SQL语句或方法
+D. 通常与@Results注解一起使用
+答案：A
+
+### [选择] 下列选项中，关于MyBatis中@Many注解描述错误的是（ ）。
+A. 用于标记插入多条记录的方法
+B. 通常与@Results注解一起使用
+C. 常用于在查询结果中嵌套加载一组关联对象的集合
+D. @Many注解的属性和@One注解的属性一致
+答案：A
+
+### [选择] MyBatis中@Result注解用于指定查询结果集中对应的字段名的属性是（ ）。
+A. property
+B. column
+C. one
+D. many
+答案：B
+
+### [选择] 下面哪项是springMVC中的前置控制器
+A. HandlerMapping
+B. DispatcherServlet
+C. DefaultAnnotationHandlerMapping
+D. SimpleUrlHandlerMapping
+答案：B
+
+### [选择] Spring MVC 接收请求参数的注解是
+A. @ResponseBody
+B. @RequestBody
+C. @RequestParam
+D. @Autowired
+答案：C
+
+### [选择] 阅读下面的Java代码，运行结果描述正确的是
+import java.util.*;
+public class TestMap{
+public static void main(String[] args){
+Map map=new HashMap( );
+map.put("first","football");
+map.put("first","basketball");
+System.out.print(map.get("first"));
+}
+}
+A. 编译时发生错误
+B. 编译通过，运行时发生错误
+C. 正确运行，显示basketball
+D. 正确运行，显示football
+答案：C
+
+### [选择] 在Java中，（ ）类的对象可被用作堆栈或者队列。
+A. LinkedList
+B. ArrayList
+C. Collection
+D. HashMap
+答案：A
+
+### [选择] 你需要一个多维数组，下面哪一个能做这个工作？
+A. int i =new int[3][3];
+B. int[] i =new int[3][3];
+C. int[][] i   =new int[3][3];
+D. int i[3][3]=new int[][];
+答案：C
+
+### [选择] 对于Java中的集合类java.util.ArrayList，以下说法正确的是
+A. 这个集合中的元素是无序的
+B. 可以通过键来获取这个集合中的元素
+C. 在对这个集合的元素执行遍历操作时，效率比较高
+D. 可以通过addFirst()方法，在列表的首部插入元素
+答案：C
+
+### [选择] 给定Java代码如下所示，在横线处新增下列（ ）方法，是对cal方法的重载。
+public class Test{
+public void cal(int x, int y, int z) {}
+________________
+}
+A. public float cal(int x, int y, int z){ return 0; }
+B. public int cal(int x, int y, int z){ return 0; }
+C. public void cal(int x, int z){ }
+D. public void cal(int z, int y, int x){ }
+答案：C
+
+### [选择] 你想用下面的代码查找数组最后一个元素的值，当你编译并运行它的时候，会发生什么？
+public class MyAr{
+public static void main(String argv[]){
+int[]i = new int[5];
+System.out.println(i[5]);
+}
+}
+A. 编译完成并输出 0
+B. 编译完成并输出null
+C. 编译完成但运行时异常
+D. 编译错误
+答案：C
+
+### [选择] Spring MVC 中返回 JSON 数据常用注解是
+A. @ResponseBody
+B. @RequestBody
+C. @ModelAttribute
+D. @PathVarible
+答案：A
+
+### [选择] MyBatis 实现动态 SQL 最常用标签是
+A. <if>
+B. <loop>
+C. <for>
+D. <while>
+答案：A
+
+### [选择] SSM 整合中，Spring 管理事务一般加在
+A. Controller 层
+B. Service 层
+C. Dao 层
+D. 实体类
+答案：B
+
+### [选择] 下列不属于 AOP 核心概念的是
+A. 切面
+B. 切点
+C. 连接点
+D. 控制器
+答案：D
+
+### [选择] MyBatis 配置文件中主环境 default 属性指定的是
+A. 映射文件
+B. 数据源环境
+C. 日志
+D. 别名
+答案：B
+
+### [选择] SSM 整合时，Spring 与 MyBatis 整合核心类是
+A. SqlSessionTemplate
+B. DispatcherServlet
+C. ViewResolver
+D. HandlerAdapter
+答案：A
+
+### [选择] Spring MVC 中 @RequestMapping 作用是
+A. 依赖注入
+B. 映射请求路径
+C. 事务控制
+D. AOP 切面
+答案：B
+
+## 章节：第2部分
+
+### [判断] 与EJB相比，Spring框架代码简洁，并且更易于集成到不同的环境中。（  ）
+答案：对
+
+### [判断] 在Spring框架中，Bean是指由Spring容器管理的对象实例。（  ）
+答案：对
+
+### [判断] Beans模块提供了Spring框架的基本组成部分，包括IoC和AOP功能。（  ）
+答案：错
+
+### [判断] DI是控制反转的英文缩写。（  ）
+答案：错
+
+### [判断] Spring的Context模块构建于Beans模块和Core模块之上。（  ）
+答案：对
+
+### [判断] BeanFactory采用延迟加载的方式创建Bean的实例。（  ）
+答案：对
+
+### [判断] <constructor-arg>标签的index属性用于指定构造方法的参数索引，参数索引从0开始依次递增1。（  ）
+答案：对
+
+### [判断] 使用静态工厂方式实例化Bean时，需要开发者定义一个静态工厂类，并在其中编写静态方法来创建Bean的实例。（  ）
+答案：对
+
+### [判断] Spring使用属性的setter方法注入Bean时，Bean类必须为需要注入的属性提供对应的setter方法。（  ）
+答案：对
+
+### [判断] 对于prototype作用域的Bean，Spring容器不会管理其完整的生命周期。（  ）
+答案：对
+
+### [判断] AOP可以通过将业务逻辑与横切关注点分离，从而实现更好的代码模块化、可维护性和可复用性。（  ）
+答案：对
+
+### [判断] 基于AOP的切面是一种垂直方向上的扩展。（  ）
+答案：错
+
+### [判断] <aop:advisor>用于配置切点，可以指定切面在哪些连接点处起作用。（  ）
+答案：错
+
+### [判断] @After注解用于定义最终final通知，不管应用程序是否抛出异常，该通知都会执行。（  ）
+答案：对
+
+### [判断] <aop:advisor>标签用于配置环绕方式，在目标方法执行前后实施增强。（  ）
+答案：错
+
+### [判断] JdbcTemplate提供了一种模板化的方式来执行SQL查询、更新等操作。（  ）
+答案：对
+
+### [判断] Spring的事务管理主要基于PlatformTransactionManager接口、TransactionDefinition接口、TransactionStatus接口实现。（  ）
+答案：对
+
+### [判断] Spring通过TransactionStatus接口统一的事务管理机制。（  ）
+答案：错
+
+### [判断] 事务的传播行为是指处于不同事务中的方法在相互调用时，方法执行期间，事务的维护情况。（  ）
+答案：对
+
+### [判断] 每个<tx:attributes>标签只能配置一个<tx:method>子标签。（  ）
+答案：错
+
+### [判断] Spring MVC是基于MVC设计模式的一个轻量级的Web框架。（  ）
+答案：对
+
+### [判断] @RequestMapping注解不能标注在类上。（  ）
+答案：错
+
+### [判断] 如果@RequestMapping注解没有指定method属性的值，程序会在运行时出错。（  ）
+答案：错
+
+### [判断] params属性中定义的值可以将请求映射的定位范围缩小。（  ）
+答案：对
+
+### [判断] @GetMapping的作用和@RequestMapping(method = RequestMethod.GET)的作用相同。（  ）
+答案：对
+
+### [判断] 在Spring MVC中进行简单类型的数据绑定，只需客户端请求参数的名称和处理器的形参名称一致即可。（  ）
+答案：对
+
+### [判断] 在POJO类型的数据绑定过程中，需要确保请求的参数名称与要绑定的POJO类中的属性名称保持一致。（  ）
+答案：对
+
+### [判断] @ResponseBody注解的作用是将处理器方法返回的对象通过适当的转换器转换为指定的格式之后，写入到HttpServletResponse对象的响应体中。（  ）
+答案：对
+
+### [判断] 当Spring MVC方法的返回值为void时，方法执行后会跳转到项目中视图名称为index的页面。（  ）
+答案：错
+
+### [判断] 使用@DateTimeFormat注解完成日期类型的格式转换无需自定义类型转换器，也无需在配置文件中定义转换器工厂或格式化工厂。（  ）
+答案：对
+
+### [判断] 在使用SimpleMappingExceptionResolver时，需要配置异常与视图之间的映射关系。（  ）
+答案：对
+
+### [判断] HandlerExceptionResolver接口是Spring MVC中用于全局异常处理的接口。（  ）
+答案：对
+
+### [判断] @ControllerAdvice注解标注的类也需要使用@Controller或@RestController注解进行标注。（  ）
+答案：错
+
+### [判断] 拦截器的preHandler()方法会在请求处理之后被调用。（  ）
+答案：错
+
+### [判断] 通过实现WebMvcConfigurer接口，开发者可以扩展Spring MVC的默认配置。（  ）
+答案：对
+
+### [判断] MyBatis基于ORM技术实现数据的持久化操作。（  ）
+答案：对
+
+### [判断] SqlSessionFactory类的主要职责是读取MyBatis的配置信息，并解析配置信息。（  ）
+答案：错
+
+### [判断] SqlSession接口提供了一系列方法用于执行SQL查询、更新、插入和删除操作。（  ）
+答案：对
+
+### [判断] <properties>标签内定义的属性优先级低于从外部属性文件中读取到的属性。（  ）
+答案：错
+
+### [判断] MyBatis映射文件中，<insert>标签的useGeneratedKeys属性用于指定是否返回生成的主键值。（  ）
+答案：对
+
+### [判断] <choose>标签用于从多个备选项中选择一个满足条件的选项。（  ）
+答案：对
+
+### [判断] <when>标签用于定义<choose>标签中的备选条件，它包含一个test属性，用于指定条件表达式。（  ）
+答案：对
+
+### [判断] <where>标签会确保只有所有条件都成立时，才会在SQL语句中添加WHERE关键字。（  ）
+答案：错
+
+### [判断] <set>标签会自动去掉最后一个字段更新后的多余逗号。（  ）
+答案：对
+
+### [判断] <trim>标签可以根据条件动态地添加或者删除指定的字符。（  ）
+答案：对
+
+### [判断] @Select注解的SQL语句中可以使用#{}语法来引用方法中的参数。（  ）
+答案：对
+
+### [判断] MyBatis中的@Options注解可以指定是否使用生成的键和设置超时时间。（  ）
+答案：对
+
+### [判断] @Results注解用于定义多个结果映射规则，可以包含多个@Result注解。（  ）
+答案：对
+
+### [判断] @One注解可以通过select属性指定关联查询的SQL语句或方法。（  ）
+答案：对
+
+### [判断] MyBatis中的@Many注解是直接提供多对多关联查询的注解。（  ）
+答案：错
+
+### [判断] MyBatis 必须配合 Spring 使用。
+答案：错
+
+### [判断] Spring 不能整合 MyBatis。
+答案：错
+
+### [判断] @ResponseBody 表示直接返回数据，不跳转页面。
+答案：对
+
+### [判断] #{ } 可以有效防止 SQL 注入。
+答案：对
+
+### [判断] 事务一般加在 Controller 层。
+答案：错
+
+### [判断] AOP 核心思想是横向抽取通用逻辑，不修改原有代码。
+答案：对
+
+### [判断] Spring MVC 中 @RequestBody 用于接收 JSON 参数。
+答案：对
+
+### [判断] MyBatis 是一个全自动 ORM 框架。
+答案：错
+
+### [判断] Spring IoC 是指控制反转，由容器创建并管理对象。
+答案：对
+
+### [判断] MyBatis 二级缓存默认开启。
+答案：错
+
+## 章节：第3部分
+
+### [多选] Spring MVC 工作流程涉及组件有
+A. DispatcherServlet
+B. HandlerMapping
+C. ViewResolver
+D. SqlSession
+答案：ABC
+
+### [多选] MyBatis 映射文件标签包括
+A. <select>
+B. <insert>
+C. <update>
+D. <delete>
+答案：ABCD
+
+### [多选] Spring 中用于声明 Bean 的注解有
+A. @Component
+B. @Service
+C. @Controller
+D. @Repository
+答案：ABCD
+
+### [多选] SSM 分层正确的有
+A. Controller 控制层
+B. Service 业务层
+C. Dao 持久层
+D. View 模型层
+答案：ABC
+
+### [多选] MyBatis 缓存包括
+A. 一级缓存
+B. 二级缓存
+C. 浏览器缓存
+D. Redis 缓存
+答案：AB
+
+### [多选] Spring 事务传播行为中常用的有
+A. REQUIRED
+B. REQUIRES_NEW
+C. SUPPORTS
+D. AUTOWIRED
+答案：ABC
+
+### [多选] Spring AOP 通知类型包括
+A. 前置
+B. 后置
+C. 异常
+D. 环绕
+答案：ABCD
+
+### [多选] Spring MVC 常用注解有
+A. @Controller
+B. @RequestMapping
+C. @ResponseBody
+D. @Autowired
+答案：ABC
+
+### [多选] MyBatis 动态 SQL 标签包括
+A. <if>
+B. <where>
+C. <foreach>
+D. <choose>
+答案：ABCD
+
+### [多选] Spring 依赖注入方式有
+A. 构造方法注入
+B. Setter 注入
+C. 字段注入
+D. 静态注入
+答案：ABC

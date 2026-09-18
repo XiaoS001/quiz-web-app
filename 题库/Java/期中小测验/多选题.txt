@@ -1,0 +1,71 @@
+三. 多选题（共10题，30分）
+
+26. Spring MVC 工作流程涉及组件有
+A. DispatcherServlet
+B. HandlerMapping
+C. ViewResolver
+D. SqlSession
+答案：ABC
+
+27. MyBatis 映射文件标签包括
+A. <select>
+B. <insert>
+C. <update>
+D. <delete>
+答案：ABCD
+
+28. Spring 中用于声明 Bean 的注解有
+A. @Component
+B. @Service
+C. @Controller
+D. @Repository
+答案：ABCD
+
+29. SSM 分层正确的有
+A. Controller 控制层
+B. Service 业务层
+C. Dao 持久层
+D. View 模型层
+答案：ABC
+
+30. MyBatis 缓存包括
+A. 一级缓存
+B. 二级缓存
+C. 浏览器缓存
+D. Redis 缓存
+答案：AB
+
+31. Spring 事务传播行为中常用的有
+A. REQUIRED
+B. REQUIRES_NEW
+C. SUPPORTS
+D. AUTOWIRED
+答案：ABC
+
+32. Spring AOP 通知类型包括
+A. 前置
+B. 后置
+C. 异常
+D. 环绕
+答案：ABCD
+
+33. Spring MVC 常用注解有
+A. @Controller
+B. @RequestMapping
+C. @ResponseBody
+D. @Autowired
+答案：ABC
+
+34. MyBatis 动态 SQL 标签包括
+A. <if>
+B. <where>
+C. <foreach>
+D. <choose>
+答案：ABCD
+
+35. Spring 依赖注入方式有
+A. 构造方法注入
+B. Setter 注入
+C. 字段注入
+D. 静态注入
+答案：ABC

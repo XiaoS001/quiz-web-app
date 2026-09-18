@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}题库列表 - 刷题{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>我的题库</h1>
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="{{ url_for('search') }}" class="btn btn-outline" style="text-decoration:none;">搜索题目</a>
+        <a href="{{ url_for('favorites') }}" class="btn btn-outline" style="text-decoration:none;">我的收藏</a>
+        <a href="{{ url_for('format_template') }}" class="btn btn-outline" style="text-decoration:none;">下载格式规范</a>
+        <button class="btn btn-primary" onclick="document.getElementById('upload-input').click()">上传题库</button>
+    </div>
+    <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data" style="display:none">
+        <input type="file" id="upload-input" name="files" accept=".txt" multiple onchange="this.form.submit()">
+    </form>
+</div>
+
+{% if quiz_sets %}
+<div class="quiz-list">
+    {% for qs in quiz_sets %}
+    {% set s = qs.stats() %}
+    <div class="quiz-card">
+        <div class="quiz-card-header">
+            <h2>{{ qs.name }}</h2>
+            <span class="quiz-date">{{ qs.created_at.strftime('%Y-%m-%d') }}</span>
+        </div>
+        <div class="quiz-meta">
+            <span class="tag">共 {{ s.total }} 题</span>
+            {% if s.choice %}<span class="tag tag-blue">选择 {{ s.choice }}</span>{% endif %}
+            {% if s.judge %}<span class="tag tag-green">判断 {{ s.judge }}</span>{% endif %}
+            {% if s.multi %}<span class="tag tag-purple">多选 {{ s.multi }}</span>{% endif %}
+            {% if s.fill %}<span class="tag tag-orange">填空 {{ s.fill }}</span>{% endif %}
+            {% if s.short_answer %}<span class="tag tag-teal">简答 {{ s.short_answer }}</span>{% endif %}
+        </div>
+        <div class="quiz-actions">
+            <a href="{{ url_for('practice_menu', quiz_id=qs.id) }}" class="btn btn-primary">开始刷题</a>
+            <a href="{{ url_for('wrongbook', quiz_id=qs.id) }}" class="btn btn-outline">错题本</a>
+            <a href="{{ url_for('stats', quiz_id=qs.id) }}" class="btn btn-outline">统计</a>
+            <form action="{{ url_for('delete_quiz', quiz_id=qs.id) }}" method="POST" style="display:inline"
+                  onsubmit="return confirm('确定删除题库「{{ qs.name }}」？所有题目和记录将一并删除。')">
+                <button type="submit" class="btn btn-danger-text">删除</button>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<div class="empty-state">
+    <p>还没有题库</p>
+    <p class="empty-hint">点击右上角"下载格式规范"获取格式模板，或直接点击"上传题库"上传符合格式规范的TXT文件</p>
+</div>
+{% endif %}
+{% endblock %}

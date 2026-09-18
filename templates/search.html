@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}搜索题目 - 刷题{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>搜索题目</h1>
+    <a href="{{ url_for('index') }}" class="btn btn-outline">返回</a>
+</div>
+
+<form class="search-box" method="GET" action="{{ url_for('search') }}">
+    <input type="text" class="search-input" name="q" value="{{ keyword }}" placeholder="输入关键词搜索题目..." autofocus>
+    <select class="search-select" name="quiz_id">
+        <option value="">全部题库</option>
+        {% for qs in quiz_sets %}
+        <option value="{{ qs.id }}" {% if selected_quiz == qs.id|string %}selected{% endif %}>{{ qs.name }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit" class="btn btn-primary">搜索</button>
+</form>
+
+{% if keyword %}
+<div class="search-result-count">找到 {{ results|length }} 道相关题目</div>
+
+{% if results %}
+{% for q in results %}
+<div class="search-result-card">
+    {% if q.chapter %}
+    <div class="src-chapter">{{ q.chapter }} · {{ q.quiz_set.name }}</div>
+    {% else %}
+    <div class="src-chapter">{{ q.quiz_set.name }}</div>
+    {% endif %}
+    <div class="src-stem">{{ q.stem[:120] }}{% if q.stem|length > 120 %}...{% endif %}</div>
+    <div class="src-meta">
+        <span>{{ type_cn.get(q.type, q.type) }}</span>
+        <a href="{{ url_for('practice', quiz_id=q.quiz_set_id, q_type=q.type) }}" class="btn btn-outline btn-sm">去练习</a>
+    </div>
+</div>
+{% endfor %}
+{% else %}
+<div class="empty-state">
+    <p>没有找到相关题目</p>
+    <p class="empty-hint">试试换个关键词</p>
+</div>
+{% endif %}
+{% else %}
+<div class="empty-state">
+    <p>输入关键词开始搜索</p>
+    <p class="empty-hint">支持按题干内容搜索，可筛选题库范围</p>
+</div>
+{% endif %}
+{% endblock %}

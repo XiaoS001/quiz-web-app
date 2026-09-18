@@ -1,0 +1,435 @@
+# 题库名称: Python期末（填空）
+
+### [填空]
+1、Python是一种面向____语言。
+答案: 对象;对象的
+
+### [填空]
+2、程序编写的基本方法是（ ）方法。
+答案: IPO;ipo;Ipo
+解析: ：
+
+### [填空]
+3、Python 安装扩展库常用的是_______工具。(英文字母全部小写)
+答案: pip;Pip
+
+### [填空]
+4、Python 程序文件扩展名为__________。(英文字母全部小写)
+答案: .py;py;.pyw;pyw
+
+### [填空]
+5、在 Python 中__________表示空类型。(英文首字母大写)
+答案: None;none;
+
+### [填空]
+6、在Python解释器中使用____函数可以进入帮助系统;键入____命令,可以退出帮助系统。
+答案: help();help; quit;Quit;quit()
+
+### [填空]
+7、Python语言是一种解释型、面向____的计算机程序设计语言。
+答案: 对象
+
+### [填空]
+8、编程语言分为低级语言和高级语言两类,其中,机器语言和汇编语言属于____语言,Python属于____语言。
+答案: 低级; 高级
+
+### [填空]
+9、将源文件转换成机器语言一般有以下两种转换方法:____方法和____方法。
+答案: 编译; 解释
+解析: ：
+
+### [填空]
+10、Python注释以符号____开始,到行尾结束。
+答案: #
+
+### [填空]
+11、开发和运行Python程序一般包括____和____两种方式。
+答案: 交互式; 文件式
+
+### [填空]
+12、高级编程语言根据执行机制不同可以分成静态语言和脚本语言两类。采用编译方式执行的语言属于____,采用解释方式执行的语言属于____。
+答案: 静态语言; 脚本语言
+解析: ：
+
+### [填空]
+13、用户程序编写的Python程序(避免使用依赖于系统的特性),无需修改就可以在任何支持Python的平台上运行,这是Python的___性。
+答案: 可移植性;可移植
+解析: ：
+
+### [填空]
+14、表达式 'Hello world!'[-4] 的值为____。
+答案: 'r';r
+解析: ：
+
+### [填空]
+15、高级编程语言根据执行机制不同可以分成静态语言和脚本语言两类。C、C++、C#、Java等程序设计语言属于____语言,Python程序设计语言属于____语言。
+答案: 静态; 脚本
+
+### [填空]
+16、Python的数字类型包含整型、浮点型、____和____。
+答案: 复数类型;复数;复数型; 布尔类型;布尔型;布尔
+
+### [填空]
+17、布尔类型是一种特殊的____。
+答案: 整型;整型类型;整数类型
+
+### [填空]
+18、Python中的复数由____和____组成。
+答案: 实部;real;Real; 虚部;image;Image
+
+### [填空]
+19、Python中的整型可以使用二进制、八进制、十进制、 表示。
+答案: 十六进制
+
+### [填空]
+20、Python中的运算符“”用于判断两个操作数是否相等。
+答案: <>;==
+
+### [填空]
+21、Python 标准库 math 中用来计算平方根的函数是__________。(英文字母全部小写)
+答案: sqrt
+
+### [填空]
+22、查看变量类型的 Python 内置函数是________________。(英文字母全部小写)
+答案: type();Type();type
+
+### [填空]
+23、查看变量内存地址的 Python 内置函数是_________________。（英文字母全部小写）
+答案: id();Id();id
+
+### [填空]
+24、以 3 为实部 4 为虚部，Python 复数的表达形式为 。
+答案: 3+4j;3+4J
+
+### [填空]
+25、Python 运算符中用来计算整除的是_________。
+答案: //
+
+### [填空]
+26、表达式[1, 2, 3]*3 的执行结果为______________________。
+答案: [1, 2, 3, 1, 2, 3, 1, 2, 3]
+
+### [填空]
+27、已知 x = 3，并且 id(x)的返回值为 496103280，那么执行语句 x += 6 之后，表达式 id(x) == 496103280的值为 。
+答案: False
+
+### [填空]
+28、 表达式“ [3] in [1, 2, 3, 4] ”的值为 ______ 。
+答案: False
+
+### [填空]
+29、 表达式 int(4**0.5) 的值为 __ 。
+答案: 2; 10
+
+### [填空]
+31、Python中的循环语句有____循环和____循环。
+答案: for; while
+解析: ：
+
+### [填空]
+32、Python中使用关键字____表示条件语句。
+答案: if
+
+### [填空]
+33、只有if条件表达式为____时才会执行满足条件的语句。
+答案: true;True;TRUE;真
+解析: ：
+
+### [填空]
+34、表达式 5 if 5>6 else (6 if 3>2 else 5) 的值为___。
+答案: 6
+
+### [填空]
+35、循环语句for i in range(-3,21,4)的循环次数为___。
+答案: 6
+
+### [填空]
+36、执行下列Python语句后的输出结果是___，循环执行了___次。
+答案: 1; 1
+解析: ：
+
+### [填空]
+37、 下面程序的执行结果是 ________ 。 s = 0 for i in range(1,101): s += i else: print(1)
+答案: 1
+解析: ：
+
+### [填空]
+38、 下面程序的执行结果是 ____ 。 s = 0 for i in range(1,101): s += i if i == 50: print(s) break else: print(1)
+答案: 1275; else;Else
+解析: ：
+
+### [填空]
+40、使用内置的____函教可创建一个列表。
+答案: list;list()
+
+### [填空]
+41、Python中列表的元素可通过索引或____两种方式访问。
+答案: 切片
+
+### [填空]
+42、使用内置的____函数可创建一个元组。
+答案: tuple;tuple()
+
+### [填空]
+43、 列表进行深拷贝需要使用到 copy 模块中的 _______ 函数。
+答案: deepcopy;deepcopy()
+
+### [填空]
+44、字典元素由____和____组成。
+答案: 键; 值
+
+### [填空]
+45、字典中的键具有____性。
+答案: 唯一
+
+### [填空]
+46、通过Python的内置方法____可以查看字典键的集合。
+答案: keys()
+
+### [填空]
+47、调用items()方法可以查看字典中的所有____
+答案: 元素
+
+### [填空]
+48、Python中可变集合和不可变集合的共同特点是____和____
+答案: 无序; 元素不可重复;不可重复
+
+### [填空]
+49、 添加列表元素主要有两个方法_______和append。
+答案: insert
+
+### [填空]
+50、列表、元组、字符串是 Python 的_________(有序？无序)序列。
+答案: 有序
+
+### [填空]
+51、 假设列表对象 aList 的值为 [3, 4, 5, 6, 7, 9, 11, 13, 15, 17] ，那么切片 aList[3:7] 得到的值是 ____________ 。(元素之间不要任意添加空格)
+答案: [6, 7, 9, 11]
+
+### [填空]
+52、 假设有列表 a = [ ‘ name ’ , ‘ age ’ , ‘ sex ’ ] 和 b = [ ‘ Dong ’ , 38, ‘ Male ’ ] ，请使用一个语句将这两个列表的内容转换为字典，并且以列表 a 中的元素为“键”，以列表 b 中的元素为“值”，这个语句可以写为 ___________ 。（英文字母不要大写）
+答案: dict(zip(a, b))
+
+### [填空]
+53、 任意长度的 Python 列表、元组和字符串中最后一个元素的下标为 __ 。
+答案: -1
+
+### [填空]
+54、 Python 语句 list(range(1,10,3)) 执行结果为 _________ 。
+答案: [1, 4, 7]
+
+### [填空]
+55、 已知列表对象 x = [ ‘ 11 ’ , ‘ 2 ’ , ‘ 3 ’ ] ，则表达式 max(x) 的值为 。
+答案: '3';‘3’
+
+### [填空]
+56、 字典中多个元素之间使用 __ 分隔开，每个元素的“键”与“值”之间使用 __ 分隔开。（逗号、冒号）
+答案: 冒号
+
+### [填空]
+57、 字典中多个元素之间使用 __ 分隔开，每个元素的“键”与“值”之间使用 __ 分隔开。（用汉字表示）
+答案: .;，;逗号; :;：;冒号
+
+### [填空]
+58、 下面代码的功能是，随机生成 50 个介于 [1,20] 之间的整数，然后统计每个整数出现频率。请把缺少的代码补全。 import random x = [random. (1,20) for i in range( )] r = dict() for i in x: r[i] = r.get(i, )+1 for k, v in r.items(): print(k, v)
+答案: randint;Randint; 50; 0; 无序性
+
+### [填空]
+60、python中使用关键字____声明一个函数。
+答案: def
+
+### [填空]
+61、匿名函数使用关键字____声明。
+答案: lambda
+
+### [填空]
+62、在函数内部对全局变量进行修改,需要先使用____关键字声明。
+答案: global
+
+### [填空]
+63、若将“python”转换为“Python”可使用________函数或________函数。
+答案: title；title(); capitalize;capitalize()
+解析: ：
+
+### [填空]
+64、Python中使用关键字____声明一个类。
+答案: class
+
+### [填空]
+65、在____init___()方法中第一个参数永远是____
+答案: self
+
+### [填空]
+66、子类中使用____函数可以调用父类中的方法。
+答案: super()
+
+### [填空]
+67、Python中通过在属性名前添加____方式设置私有属性。
+答案: _ _;__;双下划线;双下划线__
+解析: ：
+
+### [填空]
+68、Python模块中定义的所有成员,包括变量、函数和类,可以通过内置的函数__1__查询,也可以通过__2__函数查询其帮助信息。
+答案: dir();dir;Dir;Dir(); help();help;Help();Help
+
+### [填空]
+69、Python类体中,__1__是一个类方法,创建对象时调用,返回当前对象的一个实例,一般无需重载该方法。__2__方法即构造函数(构造方法),用于执行类的实例的初始化工作。对象创建后调用,初始化当前对象的实例,无返回值。__3__方法即析构函数,用于实现销毁类的实例所需的操作,如释放对象占用的非托管资源。
+答案: __new__;new;_ _new_ _; __init__;init;_ _init_ _; __del__;del;_ _del_ _
+
+### [填空]
+70、在Python中,实例变量在类的内部通过__1__访问,在外部通过对象实例访问。
+答案: self
+
+### [填空]
+71、Python语句序列“x='123';print(isinstance(x, int))”的运行结果为__1__。
+答案: False
+
+### [填空]
+72、面向对象的程序设计具有三个基本特征:__1__、__2__和__3__。(别写英文)
+答案: 封装; 继承; 多态
+
+### [填空]
+73、Python中每个模块都有一个名称,通过特殊变量__1__可以获取模块的名称。特别地,当一个模块被用户单独运行时,模块名称为__2__。
+答案: __name__;name;_ _name_ _; __main__;main;_ _main_ _
+
+### [填空]
+74、Python中假设有模块m,如果希望同时导入m中的所有成员,则可以采用__1__的导入形式。
+答案: from m import *
+
+### [填空]
+75、Python包含了数量众多的模块,通过__1__语句,可以导入模块,并使用其定义的功能。
+答案: import
+
+### [填空]
+76、下列Python语句的程序运行结果为__1__。
+答案: 100
+解析: ：
+
+### [填空]
+77、下列Python语句的程序运行结果为__1__。
+答案: 12
+解析: ：
+
+### [填空]
+78、类方法的第一个参数为( )，代表定义类方法的类。
+答案: cls;Cls; 类属性
+
+### [填空]
+80、Python中模块分为内置模块、____和____
+答案: 自定义; 第三方模块
+
+### [填空]
+81、通过____和____可导入模块。
+答案: import; from
+
+### [填空]
+82、Python中的包是一个包含____文件的目录。
+答案: 
+
+### [填空]
+83、random 模块中random____函数只能生成随机整数。
+答案: randint
+
+### [填空]
+84、os模块中的( )方法可以完成对文件的删除操作。
+答案: remove;remove()
+
+### [填空]
+85、国际上通用的一二维数据的存储格式为( )。
+答案: csv;Csv;CSV
+解析: ：
+
+### [填空]
+86、文件的打开使用的是( )方法。
+答案: open;open();Open;OPEN
+解析: ：
+
+### [填空]
+87、多维数据利用键值对等简单的二元关系展示数据间的复杂结构，Python中( )类型的数据是多维数据。
+答案: 字典;dict
+解析: ：
+
+### [填空]
+88、使用 语句可以实现close()方法的自动调用。
+答案: with;With;WITH
+
+### [填空]
+89、Python中­­____模块为正则表达式模块。
+答案: re
+
+### [填空]
+90、在Python正则模块中­­____和­­____用于替换目标文本中的匹配项。
+答案: sub(); subn()
+
+### [填空]
+91、正则表达式中有两种匹配方式,分别是贪婪匹配和­­____匹配。
+答案: 非贪婪
+
+### [填空]
+1、 下面代码的功能是，随机生成 50 个介于 [1,20] 之间的整数，然后统计每个整数出现频率。请把缺少的代码补全。 import random x = [random._____(1,20) for i in range(______)] r = dict() for i in x: r[i] = r.get( i , _____)+1 for k, v in r.items(): print(k, v)
+答案: randint; 50; 0
+
+### [填空]
+1、 下面代码的功能是，随机生成 50 个介于 [1,20] 之间的整数，然后统计每个整数出现频率。请把缺少的代码补全。 import random x = [random._____(1,20) for i in range(______)] r = dict() for i in x: r[i] = r.get( i , _____)+1 for k, v in r.items(): print(k, v)
+答案: randint; 50; 0
+
+### [填空]
+2、 定义一个类 Vector3d，补全其中的代码，使其包含 3 个私有数据成员 x、y、z，并能够在构造方法中，接收3个参数，对这3个私有数据成员进行初始化； 为类 Vector3d 增加 3 个特殊方法，分别用来支持加法运算符、减法运算符，实现两个三维向量之间的加法和减法运算（例如向量(3,4,5)与向量(4,5,6)的和为向量(7,9,11)，差为向量(-1,-1,-1)），以及支持内置函数print()，查看向量的值（例如输出各分量分别为3、4、5 的三维向量，会得到(3,4,5)）； class Vector3d: def 1 (self, x, y, z): self.__x = x self.__y = y self.__z = z def length(self): return (self.__x**2 + self.__y**2 + self.__z**2) ** 0.5 # 请在这里增加3个特殊方法，分别用来支持加法运算符、减法运算符以实现两个三维向量间的加法和减法运算，以及打印函数print() #********** Begin *********# def 2 (self): return "("+str(self.__x)+", "+str(self.__y)+", "+str(self.__z)+")" def 3 (self, v): x=self.__x+v._Vector3d__x y=self.__y+v._Vector3d__y z=self.__z+v._Vector3d__z return Vector3d(x,y,z) def 4 (self, v): x=self.__x-v._Vector3d__x y=self.__y-v._Vector3d__y z=self.__z-v._Vector3d__z return Vector3d(x,y,z) #********** End *********#
+答案: __init__;_ _init_ _; __str__;_ _str_ _; __add__;; __sub__;
+
+### [填空]
+2、进制转换，输入8位二进制数，分别将其转换为八进制、十进制、十六进制 ''' ############以下为需补充完成的程序############################# f=input() #第1题测试用例输入华氏度 bin_value=input() #第2题测试用例输入二进制数值 f= 1 #将输入的字符串型f转为数字型 c= 2 #按公式根据f计算摄氏度，四舍五入保留3位小数，要求使用round函数 print( '摄氏度:{ 3 }'.format(c) ) #输出摄氏度，保留2位小数 #第二题计算部分 #已从测试用例读入bin_value值,分别计算十进制：int_value，八进制：oct_value和十六进制:hex_value int_value= int ( bin_value, 2 ) #根据输入的bin_value求十进制int_value的值 oct_value= 4 #根据十进制int_value求八进制oct_value的值 hex_value= 5 #根据十进制int_value求16进制hex_value的值 print(int_value , oct_value, hex_value)
+答案: float(f);float( f ); round((f-32)*5/9,3); :.2f; oct(int_value); hex(int_value)
+
+### [填空]
+4、 本关任务：求解一元二次方程 ax 2 + bx + c =0 的根，系数 a 、 b 、 c 的值从输入获取。注意考虑以下几种情况。 """ 任务：求解一元二次方程 ax2+bx+c=0 的根，系数 a、b、c 的值从输入获取。(本关a,b,c都是整型) """ #请在下面的Begin-End之间按照注释中给出的提示编写正确的代码 ########### Begin ########### #第1步：使用input获取三个系数值，分别赋值给a、b、c from 1 import sqrt a = int(input()) b = int(input()) c = int(input()) #第2步：求解一元二次方程，并打印结果x的值 tmp= 2 if a==0 and b!=0: x=-c/b print(x) 3 a!=0 and tmp>0: x1=( 4 )/(2*a) x2=(-b-sqrt(tmp))/(2*a) print("x1为%f，x2为%f"% (x1,x2)) 3 a!=0 and tmp==0: x= 5 print(x) else: print('无解')
+答案: math;Math; b**2-4*a*c; elif; -b+sqrt(tmp);sqrt(tmp)-b; -b/(2*a)
+
+### [填空]
+5、#绘图题，绘制柱状图 #任务 ： A 班计算机程序设计课 5 个小组的平均成绩柱状图 import numpy as np import 1 as plt means_score = (90, 85, 77, 82, 79) # y 轴序列数据 index = np.arange(5) # x 轴序列数据 bar_width = 0.35 #条形宽度 plt. 2 (index, means_score, bar_width, alpha=0.7, color='b') #绘制柱状图，alpha 表示颜色的透明程度 x_labels = ['Group 1', 'Group 2', 'Group 3', 'Group 4', 'Group 5'] plt. 3 (index, x_labels) #横轴标签 4 #展示图像
+答案: matplotlib.pyplot; bar; xticks; plt.show();plt.show( )
+
+### [填空]
+6、""" 任务：给定一个整数 n，判断 n 以内的正数是否含有水仙花数，n 通过 input 获取。如果有，输出“有水仙花数”，如果没有，则输出“没有水仙花数”。 水仙花数是指一个 3 位的整数，它的每个位上的数字的 3 次幂之和等于它本身。 """ # 请在下面的Begin-End之间按照注释中给出的提示编写正确的代码 ########## Begin ########## n = 1 # 将 n 转换为整数 for num in range( 5 , n): a = 2 b = num // 10 % 10 c = num // 100 if num == 3 : print("有水仙花数") break 4 : print("没有水仙花数") ########## End ##########
+答案: int(input()); num%10;num % 10; a**3+b**3+c**3; else; 100
+
+### [填空]
+7、""" 任务：给定一个元组，利用列表和元组的相互转换实现元组元素的更改，去除元组中的整型数据。打印更改后的元组。 """ tup = (1,"3",4,5,"4","a",(1,2,3,4),"b","c",6,17,"d",("a","b","c"),0,"e","f",True,10,"False",11,"h","A","B","C",30,"D",-35,-60,(-1,-2,-5)) ##########Begin########## # 利用列表和元组的相互转换实现元组元素的更改，去除元组中的整型数据 lis= 1 for val in tup: if 2 ==int: 3 print( 4 ) ##########End##########
+答案: list(tup); type(val); lis.remove(val); tuple(lis)
+
+### [填空]
+8、'''商品价格区间排序''' price_li = [399, 4369, 539, 288, 109, 749, 235, 190, 99,1000] section_li = [] max_section = int(input("请输入最大价格:")) min_section = int(input("请输入最小价格:")) for i in price_li: if min_section <= i <= max_section: section_li. 1 #将符合条件的添加到列表section_li中 print("1.价格降序排序") print("2.价格升序排序") choice_num = int(input("请选择排序方式:")) if choice_num == 1: 2 #价格降序排序 else: 3 #价格升序排序 print(section_li)
+答案: append(i); section_li.sort(reverse=True); section_li.sort()
+
+### [填空]
+9、""" 任务：判断给定的整数是否是素数。该整数是通过 input 获取。 """ ##########Begin########## # 判断给定的整数是否是素数，并按照要求打印结果 num = 1 #请输入整数num if 2 : print("输入数据不合法") else: if 3 : for i in range(2,num): if ( 4 ) == 0: print("不是素数") break 5 : print("是素数") # 如果输入的数字小于或等于 1，不是素数 else: print("不是素数") ##########End##########
+答案: int(input()); num <1;num<1; num > 1;num>1; num%i;num % i; else
+
+### [填空]
+5、用空格分割句子 print(re. 5 (r'\s',text)) #********** End **********
+答案: compile; match; search; subn; split
+
+### [填空]
+11、class Book: # 请在下面填入声明两个实例属性分别为bookname和price def __init__(self,bookname,price): 1 = bookname 2 = price def sell(self): print("%s书本的价格为%d" %(self.bookname,int(self.price))) static_var = 100 # 请在下面填入函数修饰符将printStatic()方法声明为静态方法 3 def printStatic(): print(Book.static_var) # 请在下面填入函数修饰符将printVersion(cls)方法声明为类方法 4 def printVersion( 5 ): pass book = Book("python","45") book.sell()
+答案: self.bookname; self.price; @staticmethod; @classmethod; cls
+
+### [填空]
+12、''' 捕获数组越界异常 IndexError，并打印“数组下标越界”； 捕获类型异常 TypeError，并打印“相加的两元素不是同一类型”，然后将非字符类型的数据转换为字符类型，然后打印相加的结果； 如果两元素可以正常相加，则打印相加的结果。 ''' list1 = eval(input()) # 获取给定的列表 ########## Begin ########## # 给定一个列表，将列表中第 3 个元素与第 8 个元素相加，打印相加后的结果，并捕获指定的异常 try: print( 1 ) except 2 : print("数组下标越界") except 3 : print("相加的两元素不是同一类型") print( 4 )
+答案: list1[2]+list1[7];list1[7]+lis1[2]; IndexError; TypeError; str(list1[2])+str(list1[7]);str(list1[7])+str(list1[2])
+
+### [填空]
+13、求最小公倍数算法 ''' 说明 ： 对任意两个正整数a和b，a*b必是他们的公倍数。假设g为a和b的最大公约数，那么a,b, 可以分别写成一个正整数与他们最大公约数的乘积的形式，即a = p * g，b = q * g，那么显然c = p * q * g，是a和b的一个公倍数，而且是最小公倍数''' class Solution(): def get_lcm(self, x): # 其中 x 是一个列表 # 请在此添加代码，实现求出给定的所有正整数的最小公倍数，并将其返回 #********** Begin *********# def gcd(a, b): #最小公约数 return a if b == 0 else gcd( 1 ) def lcm(a, b): #最小公倍数 return a * b // 2 ans = x[0] for index in range( 3 ): x[index+1] = lcm(x[index], x[index+1]) ans = max( 4 ) return ans #********** End **********# pass
+答案: b, a%b; gcd(a,b) ;gcd(b,a); len(x)-1; ans, x[index+1];
+
+### [填空]
+14、''' 埃拉托斯特尼筛法。其算法描述为： 先用一个数组vis，把不大于该正整数x的所有正整数标记为0，表示没有访问。 然后从第一个素数2开始遍历整个区间，如果当前访问的数没有访问过，则可以认为它是一个素数，那么就将它在该区间内所有的倍数全部标记为已访问，这样就保证外部的循环发现的没有访问过的数都是素数。 ''' def sieve(x): # x表示的是一个列表 vis = [0 for i in 1 ] prime_table = [] for i in range(2, x+1): if vis[i] == 0: prime_table. 2 for j in range(i*2, 3 , 4 ): vis[j] = 5 return prime_table
+答案: range(x+1); append(i); x+1; i; 1
+
+### [填空]
+15、字符串处理 ''' step1 ：将输入的源字符串 source_string 首尾的空格删除； step2 ：将 step1 处理后的字符串的所有单词的首字母变为大写，并打印输出； step3 ：查找输入字符串 source_string 中，是否存在 day 这个子字符串，并打印输出查找结果； step4 ：对输入字符串 source_string 执行字符替换操作，将其中所有的 day 替换为 time，并打印输出替换后的字符串； step5 ：对 step2 进行替换操作后的新字符串，按照空格进行分割，并将分割后的字符列表打印输出出来。 ''' source_string = input() # ********** Begin ********** # print( 1 ) print(len( 1 . 2 )) string_index = source_string. 3 ('day') print(string_index) r_string = source_string. 4 ('day','time') print(r_string) new_string_list = r_string. 5 print(new_string_list)
+答案: source_string.strip();source_string.strip( ); title(); find; replace; split(' ');split(" "); append; remove; index; len
+
+### [填空]
+17、''' 客人名单的变化 step 1：将guests列表末尾的元素删除，并将这个被删除的元素值保存到deleted_guest变量； step 2：将deleted_guest插入到 step 1 删除后的guests列表索引位置为2的地方； step 3：将 step 2 处理后的guests列表索引位置为1的元素删除； step4 : 按客人名字的首字母从大到小的顺序进行排序 step5 : 利用切片方法从guests列表中每3个元素取1个，组成子序列 ''' # 创建并初始化Guests列表 guests = [] while True: try: guest = input() guests.append(guest) except: break ########## Begin ########## deleted_guest = guests. 1 #任务1 guests. 2 (2,deleted_guest) #任务2 3 (guests[1]) #任务3 guests. 4 #任务4 first_three = guests 5 #任务5
+答案: pop(len(guests)-1); insert; del; sort(reverse=True); [::3];[0:len(guests):3];[:len(guests):3];[0::3]
+

@@ -1,0 +1,16 @@
+四. 填空题（共5题，5分）
+
+36. MyBatis 中解决列名与属性不一致的标签是 ____。
+答案：resultMap
+
+37. MyBatis 映射文件中查询标签是 ____。
+答案：select
+
+38. MyBatis 默认开启的缓存是 ____。
+答案：一级缓存
+
+39. MyBatis 配置数据库信息的标签是 ____。
+答案：dataSource
+
+40. MyBatis 动态 SQL 中循环遍历集合的标签是 ____。
+答案：foreach

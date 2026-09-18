@@ -1,0 +1,26 @@
+# 题库名称：测试题库A-正常格式
+
+## 章节：第一章 测试用题
+
+### [选择] 以下哪个是 Python 中用于定义函数的关键字？
+A. func
+B. def
+C. define
+D. function
+答案：B
+
+### [判断] Python 中的列表（list）是可变类型。（ ）
+答案：对
+
+### [多选] 以下哪些属于 Python 的内置数据类型？（多选）
+A. list
+B. dict
+C. table
+D. tuple
+答案：ABD
+
+### [填空] Python 中用于定义类的关键字是 ____。
+答案：class
+
+### [简答] Python 中表示空值的关键字是什么？
+答案：None

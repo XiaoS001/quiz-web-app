@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}统计 - {{ quiz_set.name }}{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>学习统计</h1>
+    <a href="{{ url_for('index') }}" class="btn btn-outline">返回</a>
+</div>
+<p class="page-subtitle">{{ quiz_set.name }}</p>
+
+<div class="stats-overview">
+    <div class="stat-card">
+        <div class="stat-value">{{ accuracy }}%</div>
+        <div class="stat-label">总正确率</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-value">{{ stats.total }}</div>
+        <div class="stat-label">题目总数</div>
+    </div>
+</div>
+
+<div class="stats-grid">
+    {% for t, cn in type_cn.items() %}
+    <div class="stat-row">
+        <div class="stat-row-label">{{ cn }}</div>
+        <div class="stat-row-bar">
+            <div class="stat-row-count">{{ stats[t] }} 题</div>
+            {% if wrong[t] %}
+            <span class="stat-row-wrong">错题 {{ wrong[t] }}</span>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% if recent %}
+<div class="recent-section">
+    <h3>最近答题</h3>
+    {% for r in recent %}
+    <div class="recent-item {% if r.is_correct %}recent-correct{% else %}recent-wrong{% endif %}">
+        <span class="recent-result">{{ '✓' if r.is_correct else '✗' }}</span>
+        <span class="recent-stem">{{ r.question.stem[:40] }}{% if r.question.stem|length > 40 %}...{% endif %}</span>
+        <span class="recent-time">{{ r.created_at.strftime('%m-%d %H:%M') }}</span>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<div class="empty-state">
+    <p>还没有答题记录</p>
+    <p class="empty-hint">开始刷题后这里会显示统计信息</p>
+</div>
+{% endif %}
+{% endblock %}

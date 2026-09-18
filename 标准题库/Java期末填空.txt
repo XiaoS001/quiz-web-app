@@ -1,0 +1,168 @@
+# 题库名称：Java期末（填空）
+
+## 章节：第1部分
+
+### [填空] 在____方面，Spring框架提供了对Spring MVC、Struts2等框架的整合。
+答案：表现层
+
+### [填空] ____是指框架或工具的使用不会对被应用程序的核心逻辑产生侵入性的影响。
+答案：非侵入式
+
+### [填空] Spring的核心容器主要由____模块、Core模块、Context模块和SpEL模块组成。
+答案：Beans
+
+### [填空] Spring的____模块提供了对面向切面编程的支持，允许开发者定义切面来截取应用程序的流程。
+答案：AOP
+
+### [填空] Spring框架的____容器主要包括BeanFactory和ApplicationContext。
+答案：IoC
+
+### [填空] 常见的IoC容器有BeanFactory和____。
+答案：ApplicationContext
+
+### [填空] <bean>标签的____属性用于指定Bean的具体类型。
+答案：class
+
+### [填空] Spring框架提供了____注解，该注解用于指定Bean的作用域。
+答案：@Scope
+
+### [填空] 在Spring的XML配置文件中，可以通过<bean>标签的____属性指定初始化方法的名称。
+答案：init-method
+
+### [填空] Spring的____注解用于指定要自动装配的对象。
+答案：@Autowired
+
+### [填空] AOP中的____动态代理是一种基于接口的代理方式。
+答案：JDK
+
+### [填空] 使用____动态代理时，代理类需要实现MethodInterceptor接口。
+答案：CGLIB
+
+### [填空] AOP中的____是指程序执行过程中满足预先指定条件的连接点。
+答案：切入点
+
+### [填空] ____标签是Spring AOP配置的根标签。
+答案：config>
+
+### [填空] ____注解用于将一个类标记为切面。
+答案：@AspectJ
+
+### [填空] Spring JDBC模块主要由____、dataSource、object、support四个包组成。
+答案：core
+
+### [填空] Spring提供了____注解来实现声明式事务管理。
+答案：@Transactional
+
+### [填空] ____标签主要用于配置每个方法具体的事务属性。
+答案：method>
+
+### [填空] 在Spring框架中，提供了两种主要的事务管理方式：____事务管理和声明式事务管理。
+答案：编程式
+
+### [填空] <tx:advice>的transaction-manager属性用于指定____。
+答案：事务管理器
+
+### [填空] MVC模式将应用程序分为三个核心部分：Model、View和____。
+答案：Controller
+
+### [填空] Spring提供了____注解用于标识Spring MVC的处理器类。
+答案：@Controller
+
+### [填空] Spring MVC的____注解用于建立请求URL和处理器之间的映射关系。
+答案：@RequestMapping
+
+### [填空] ____属性是@RequestMapping注解的默认属性。
+答案：value
+
+### [填空] ____注解用于匹配基于HTTP的GET方法的请求。
+答案：@GetMapping
+
+### [填空] ____注解用于从请求中获取参数的值并将其传递给处理器方法的参数。
+答案：@RequestParam
+
+### [填空] 当请求的映射方式是REST风格时，可以通过____注解将URL中占位符参数绑定到处理器方法的形参中。
+答案：@PathVariable
+
+### [填空] Spring MVC中，当一个请求需要将请求体中的数据，可以在方法参数上使用____注解。
+答案：@RequestBody
+
+### [填空] Model的实现类对象和ModelMap对象都可以设置模型数据，模型数据会填充到____域中，以供视图层使用。
+答案：Request
+
+### [填空] ____注解相当于@Controller+@ResponseBody两个注解的结合。
+答案：@RestController
+
+### [填空] ____注解是Spring MVC用于定义全局处理器通知的注解。
+答案：@ControllerAdvice
+
+### [填空] Spring MVC程序中可以使用____注解中指定需要处理的异常类型。
+答案：@ExceptionHandler
+
+### [填空] Spring MVC的____使得开发者能够在请求进入处理器之前、处理器处理完请求后以及渲染视图之后执行一些特定的操作。
+答案：拦截器
+
+### [填空] 自定义拦截器类可以通过实现____接口实现。
+答案：HandlerInterceptor
+
+### [填空] 在Spring MVC的XML配置文件中，可以使用____标签配置拦截器的信息。
+答案：interceptors>
+
+### [填空] MyBatis中主要负责创建SqlSession对象的接口是____。
+答案：SqlSessionFactory
+
+### [填空] MyBatis核心配置文件通过____标签将所有的配置信息组织起来。
+答案：<configuration>
+
+### [填空] MyBatis核心配置文件中，<properties>标签可以通过____或url属性读取指定位置的外部属性文件。
+答案：resource
+
+### [填空] MyBatis映射文件以____标签作为其根元素，用以标识一个独立的XML映射单元。
+答案：<mapper>
+
+### [填空] MyBatis映射文件中，<select>标签的____属性用于指定查询结果的映射类型。
+答案：resultType
+
+### [填空] ____标签可以根据指定的条件表达式的结果动态生成SQL语句。
+答案：<if>
+
+### [填空] <foreach>标签的separator属性用于指定每次迭代之间插入的____。
+答案：分隔符
+
+### [填空] MyBatis映射文件中，通过____标签可以根据条件动态地生成SET子句。
+答案：<set>
+
+### [填空] <trim>标签的____属性用于指定给SQL语句增加的前缀字符串。
+答案：prefix
+
+### [填空] <foreach>标签的____属性用于指定遍历的可迭代对象。
+答案：collection
+
+### [填空] MyBatis的____注解用于标记插入操作的方法。
+答案：@Insert
+
+### [填空] MyBatis的____注解用于定义单个Java对象属性与数据表字段的映射关系。
+答案：@Result
+
+### [填空] MyBatis的____注解用于设置一对一关联查询时的细节信息。
+答案：@One
+
+### [填空] MyBatis的____注解用于描述一对多关联关系。
+答案：@Many
+
+### [填空] MyBatis的____注解用于标记方法参数在SQL语句中的占位符名称。
+答案：@Param
+
+### [填空] MyBatis 中解决列名与属性不一致的标签是 ____。
+答案：resultMap
+
+### [填空] MyBatis 映射文件中查询标签是 ____。
+答案：select
+
+### [填空] MyBatis 默认开启的缓存是 ____。
+答案：一级缓存
+
+### [填空] MyBatis 配置数据库信息的标签是 ____。
+答案：dataSource
+
+### [填空] MyBatis 动态 SQL 中循环遍历集合的标签是 ____。
+答案：foreach

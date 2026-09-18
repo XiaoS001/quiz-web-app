@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block title %}错题本 - {{ quiz_set.name }}{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>错题本</h1>
+    <a href="{{ url_for('index') }}" class="btn btn-outline">返回</a>
+</div>
+<p class="page-subtitle">{{ quiz_set.name }}</p>
+
+<div class="tabs">
+    {% for t, cn in type_cn.items() %}
+    {% set count = wrong_by_type[t] | length %}
+    {% if count > 0 or s_total %}
+    <button class="tab {% if loop.first %}active{% endif %}" onclick="switchTab('{{ t }}')">{{ cn }} ({{ count }})</button>
+    {% endif %}
+    {% endfor %}
+</div>
+
+{% for t, cn in type_cn.items() %}
+<div class="tab-content" id="tab-{{ t }}" {% if not loop.first %}style="display:none"{% endif %}>
+    {% set wrongs = wrong_by_type[t] %}
+    {% if wrongs %}
+    <div class="wrong-actions">
+        <a href="{{ url_for('wrong_practice', quiz_id=quiz_set.id, q_type=t) }}" class="btn btn-primary btn-sm">错题练习</a>
+        <form action="{{ url_for('clear_wrong', quiz_id=quiz_set.id, q_type=t) }}" method="POST"
+              onsubmit="return confirm('确定清空{{ cn }}错题记录？')">
+            <button type="submit" class="btn btn-danger-text btn-sm">清空错题</button>
+        </form>
+    </div>
+    {% for item in wrongs %}
+    <div class="wrong-card">
+        <div class="wrong-card-num">#{{ loop.index }}</div>
+        <div class="wrong-card-body">
+            {% if item.question.chapter %}
+            <div class="wrong-chapter">{{ item.question.chapter }}</div>
+            {% endif %}
+            <div class="wrong-stem">{{ item.question.stem }}</div>
+
+            {% if item.question.type in ['choice', 'multi'] %}
+            {% set opts = item.question.options | from_json %}
+            {% for opt in opts %}
+            <div class="wrong-option {% if opt.letter in item.question.answer %}option-correct{% endif %}">
+                {{ opt.letter }}. {{ opt.text }}
+            </div>
+            {% endfor %}
+            {% endif %}
+
+            <div class="wrong-answers">
+                <div class="wrong-user-answer">
+                    <span class="label">你的答案：</span>
+                    <span class="value">{{ item.wrong_answer }}</span>
+                </div>
+                <div class="wrong-correct-answer">
+                    <span class="label">正确答案：</span>
+                    <span class="value">{{ item.question.answer }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <div class="empty-state">
+        <p>没有错题</p>
+        <p class="empty-hint">{{ cn }}全部正确，继续保持</p>
+    </div>
+    {% endif %}
+</div>
+{% endfor %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+function switchTab(type) {
+    document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+    document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+    document.getElementById('tab-' + type).style.display = 'block';
+    event.target.classList.add('active');
+}
+</script>
+{% endblock %}
