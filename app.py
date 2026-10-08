@@ -15,7 +15,7 @@ from parser import parse_txt, check_answer, normalize_answer
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'quiz-secret-key-2026'
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-only-not-for-production')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(BASE_DIR, 'quiz.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB
@@ -208,6 +208,7 @@ def practice(quiz_id, q_type):
                     options = []
                 # 打乱选项顺序
                 shuffled = options[:]
+                random.shuffle(shuffled)
                 item['options'] = shuffled
             q_list.append(item)
         except Exception as e:
@@ -385,6 +386,7 @@ def wrong_practice(quiz_id, q_type):
                 except (json.JSONDecodeError, TypeError, ValueError):
                     options = []
                 shuffled = options[:]
+                random.shuffle(shuffled)
                 item['options'] = shuffled
             q_list.append(item)
         except Exception as e:
@@ -522,6 +524,7 @@ def favorite_practice(quiz_id):
                 except (json.JSONDecodeError, TypeError, ValueError):
                     options = []
                 shuffled = options[:]
+                random.shuffle(shuffled)
                 item['options'] = shuffled
             q_list.append(item)
         except Exception as e:

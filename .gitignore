@@ -19,6 +19,7 @@ venv/
 # 一旦推上公开仓库就收不回来了。它可以从「标准题库/」重新导入生成。
 quiz.db
 quiz.db.bak
+*.db.bak*
 *.pytest-bak
 
 # ---- 运行时产物 ----

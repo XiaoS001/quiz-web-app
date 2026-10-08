@@ -75,6 +75,7 @@ def parse_txt(content):
             # 读取后续行：选项和答案
             options = []
             answer = ''
+            explanation = ''
             i += 1
 
             while i < len(lines):
@@ -106,6 +107,21 @@ def parse_txt(content):
                     i += 1
                     continue
 
+                # 解析行：绝不进题干；有内容则存进 explanation 字段
+                # 题库里大量出现「解析: ：」这种写法 —— 冒号后面其实什么都没有，
+                # 所以先把「解析:」以及紧随其后的冒号/空白一起清掉，再看有没有内容
+                if re.match(r'^解析\s*[:：]', sub):
+                    content = re.sub(r'^解析\s*[:：]+[\s:：]*', '', sub).strip()
+                    if content:
+                        explanation = content
+                    i += 1
+                    continue
+
+                # 「我的答案」行：按《题目格式规范》丢弃，不进题干
+                if re.match(r'^我的答案\s*[:：]', sub):
+                    i += 1
+                    continue
+
                 # 非选项非答案的内容，可能是题干续行
                 # 判断题/填空题可能没有选项，直接到答案
                 # 如果这一行不像新题开头，就当作题干的一部分
@@ -125,7 +141,7 @@ def parse_txt(content):
                 'stem': stem,
                 'options': json.dumps(options, ensure_ascii=False),
                 'answer': answer,
-                'explanation': '',
+                'explanation': explanation,
             })
             continue
 

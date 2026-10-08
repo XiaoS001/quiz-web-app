@@ -89,5 +89,5 @@ class Favorite(db.Model):
     quiz_set_id = db.Column(db.Integer, db.ForeignKey('quiz_set.id'), nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.now)
 
-    question = db.relationship('Question', backref='favorites')
-    quiz_set = db.relationship('QuizSet', backref='favorites')
+    question = db.relationship('Question', backref=db.backref('favorites', cascade='all, delete-orphan'))
+    quiz_set = db.relationship('QuizSet', backref=db.backref('favorites', cascade='all, delete-orphan'))
